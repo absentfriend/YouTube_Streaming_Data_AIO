@@ -1,0 +1,38 @@
+<!--
+NDYSHO http://localhost/ ME HOSTIN TEND
+DUHET LIVESTREAMSPRO PER TE LUAJTUR KETE STRUCTURE
+ADDON HOST https://addons.kodi.al
+ADDON FILE LiveStreamsPro.zip
+INSTALL ONLINE FROM REPO EDHE JO NGA LOCAL DISK
+-->
+
+<item> <!-- DIRECT LINK PER XTREAM CODES PANEL -->
+<title>[COLOR lime][B]Youtube DIRECT LINK[/COLOR][/B]</title>
+<thumbnail>http://png.kodi.al/tv/albdroid/black.png</thumbnail>
+<fanart>http://png.kodi.al/tv/albdroid/black.png</fanart>
+<link>http://localhost/xtream_panel.php?id=2018HTdmB-4</link>
+</item>
+
+<item> <!-- VLC LINK -->
+<title>[B][COLOR lime]Youtube VLC[/COLOR][/B]</title>
+<thumbnail>http://png.kodi.al/tv/albdroid/black.png</thumbnail>
+<fanart>http://png.kodi.al/tv/albdroid/black.png</fanart>
+<link>$doregex[stream_link]</link>
+<regex>
+<name>stream_link</name>
+<expres>#EXTINF:-1.*\n(.*)</expres> <!-- https://rubular.com/r/xVwDfFj0n0OZE7 -->
+<page>http://localhost/m3u_stream.php?id=2018HTdmB-4</page>
+</regex>
+</item>
+
+<item> <!-- RAW LINK -->
+<title>[B][COLOR lime]Youtube RAW[/COLOR][/B]</title>
+<thumbnail>http://png.kodi.al/tv/albdroid/black.png</thumbnail>
+<fanart>http://png.kodi.al/tv/albdroid/black.png</fanart>
+<link>$doregex[stream_link]</link>
+<regex>
+<name>stream_link</name>
+<expres>(http.*?.*)</expres> <!-- https://rubular.com/r/hQd3qU52dHXUlP -->
+<page>http://localhost/raw_stream.php?id=2018HTdmB-4</page>
+</regex>
+</item>
