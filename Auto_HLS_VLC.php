@@ -25,6 +25,7 @@
 */
 
 error_reporting(0);
+date_default_timezone_set("Europe/Tirane");
 if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
   $protocol = 'http://';
 } else {
@@ -68,7 +69,6 @@ die("<b>
 <br/>
 <b><center><font color=lime>FB: /albdroid.official/</b></center></font><br/>
 ");
-
 $chid = $_GET["id"];
 $Get_Data_URL = (('http://youtube.com/get_video_info?video_id=' . $chid));
 $Get_Data_Contents = urldecode(trim($Get_Data_URL));
