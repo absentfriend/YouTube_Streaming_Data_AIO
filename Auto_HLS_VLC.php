@@ -32,7 +32,8 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
   $protocol = 'https://';
 }
 $ROOT_URL = $protocol . $_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']) . "/";
-$Auto_HLS_VLC = $ROOT_URL . "Auto_HLS_VLC.php?id=" . "2018HTdmB-4";
+$Auto_HLS_VLC = $ROOT_URL . "Auto_HLS_VLC.php?id=";
+$VIDEO_ID = "2018HTdmB-4";
 if(!isset($_GET['id']))
 die("<b>
 <center>
@@ -58,7 +59,7 @@ die("<b>
 <b>
 <center>
 <font color=lime>Pershembull:<br>
-<font color=lime>XTREAM PANEL:<font color=red> $Auto_HLS_VLC<br>
+<font color=lime>GET:<font color=lime> $Auto_HLS_VLC<font color=red>$VIDEO_ID<br>
 </b>
 </center>
 </font>
